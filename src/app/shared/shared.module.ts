@@ -6,6 +6,9 @@ import { ClientGridComponent } from './client-grid/client-grid.component';
 import { ServerGridComponent } from './server-grid/server-grid.component';
 import { AgGridAngular } from 'ag-grid-angular';
 
+import { AllCommunityModule, ModuleRegistry } from "ag-grid-community";
+
+ModuleRegistry.registerModules([AllCommunityModule]);
 
 @NgModule({
   declarations: [
