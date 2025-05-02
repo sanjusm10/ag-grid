@@ -4,7 +4,7 @@ import { ServerAgGridComponent } from './server-ag-grid/server-ag-grid.component
 import { ClientAgGridComponent } from './client-ag-grid/client-ag-grid.component';
 import { ClientGridComponent } from './client-grid/client-grid.component';
 import { ServerGridComponent } from './server-grid/server-grid.component';
-
+import { AgGridAngular } from 'ag-grid-angular';
 
 
 @NgModule({
@@ -15,7 +15,14 @@ import { ServerGridComponent } from './server-grid/server-grid.component';
     ServerGridComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AgGridAngular
+  ],
+  exports: [
+    ServerAgGridComponent,
+    ClientAgGridComponent,
+    ClientGridComponent,
+    ServerGridComponent
   ]
 })
 export class SharedModule { }

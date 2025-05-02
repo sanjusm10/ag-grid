@@ -4,6 +4,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 
+import { AllCommunityModule, ModuleRegistry } from "ag-grid-community";
+import { HttpClientModule } from '@angular/common/http';
+
+ModuleRegistry.registerModules([AllCommunityModule]);
+
 @NgModule({
   declarations: [
     AppComponent
@@ -11,7 +16,9 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
